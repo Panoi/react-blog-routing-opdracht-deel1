@@ -22,7 +22,7 @@ const [isAuth, setIsAuth] = useState(false);
             <Routes>
             <Route path="/" element={<Home />} />
                 <Route path="/create-blog" element={<CreateBlog setIsAuth={setIsAuth} isAuth={isAuth} />} />
-                <Route path="/blogs" element={isAuth ? <Blogs /> : <Navigate to="/create-blog" />} />
+                <Route path="/blogs" element={<Blogs />} />
                 <Route path="*" element={<PageNotFound />} />
                 <Route path="/blogs/:id" element={<BlogDetails />} />
             </Routes>
